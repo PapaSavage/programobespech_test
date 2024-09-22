@@ -1,0 +1,170 @@
+.btn {
+    font-family: DMSans-SemiBold;
+    @apply rounded-[10px] flex items-center gap-[16px] uppercase transition duration-300;
+
+    &_solid {
+        box-shadow: 0px 8px 24px 0px rgba(217, 14, 50, 0.12);
+        @apply btn bg-primary_red text-white;
+
+        &:hover {
+            box-shadow: 0px 8px 24px 0px rgba(217, 14, 50, 0.12);
+            @apply btn bg-primary_pink text-white;
+        }
+
+        &:active {
+            box-shadow: 0px 8px 24px 0px rgba(217, 14, 50, 0.12);
+            @apply btn bg-primary_red text-white;
+        }
+
+        &_min {
+            @apply btn_solid py-[9px] px-[18px] justify-between text-[12px] leading-[20px] tracking-[1px];
+        }
+
+        &_icon {
+            @apply btn_solid p-[9px];
+            border-radius: 6px;
+        }
+    }
+
+    &_outlined {
+        @apply btn bg-transparent text-secondary_lightred border border-secondary_lightred;
+
+        &:hover {
+            @apply btn text-primary_red border-primary_red;
+        }
+
+        &:active {
+            @apply btn text-primary_red border-primary_red;
+        }
+
+        &_min {
+            @apply btn_outlined py-[9px] px-[18px] justify-between text-[12px] leading-[20px] tracking-[1px];
+        }
+
+        &_icon {
+            @apply btn_outlined p-[9px];
+            border-radius: 6px;
+        }
+    }
+}
+
+/* INPUT */
+
+.search-container {
+    position: relative;
+    display: inline-block;
+    /* Ensure the container wraps the input */
+}
+
+.input {
+    @apply rounded-[8px] text-[16px] leading-[22px] border px-[16px] py-[9px];
+
+    &_with_icon {
+        @apply input;
+    }
+
+    &:hover {
+        @apply border-phiolet;
+    }
+
+    &:focus {
+        outline: 1px solid #7895FF;
+    }
+
+    &::placeholder {
+        @apply text-gray;
+    }
+
+}
+
+.input_pages {
+    @apply rounded-[8px] text-[15px] leading-[22px] border-2 px-[6px] py-[5px] text-center w-9;
+
+    &:hover {
+        @apply border-phiolet;
+    }
+
+    &:focus {
+        outline: 1px solid #7895FF;
+    }
+
+    &::placeholder {
+        @apply text-gray;
+    }
+}
+
+select {
+    @apply rounded-[8px] text-[16px] leading-[22px] border px-[16px] py-[9px];
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    // appearance: none;
+
+    &:hover {
+        @apply border-phiolet;
+    }
+
+    &:focus {
+        outline: 1px solid #7895FF;
+    }
+
+    &::placeholder {
+        @apply text-gray;
+    }
+
+    &::after {
+        content: url("./arrow_down.png");
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        height: 20px;
+        width: 20px;
+        pointer-events: none;
+    }
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    background: url('./zoom.ico') no-repeat;
+    background-size: cover;
+}
+
+// BADGE
+
+.badge {
+    font-family: DMSans-Bold;
+    flex-basis: auto;
+    cursor: default;
+    @apply flex flex-row gap-[8px] items-center px-[14px] text-[15px] leading-[22px] rounded-[6px] h-[30px];
+
+    &_primary {
+        @apply badge bg-[#EDEDED] text-darkgray;
+    }
+
+    &_green {
+        @apply badge bg-[#E4F5DD] text-secondary_green;
+    }
+}
+
+.text-gray {
+    @apply text-font_black/60;
+}
+
+.text-darkgray {
+    @apply text-font_black/80;
+}
+
+hr.solid {
+    // border-top: 1px solid #bbbbbb7c;
+    @apply border-t-font_black/10;
+}
+
+.user {
+    font-family: DMSans-Medium;
+    @apply ml-[14px] mr-[32px] text-font_black;
+}

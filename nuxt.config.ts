@@ -2,7 +2,11 @@
 export default defineNuxtConfig({
 	compatibilityDate: "2024-04-03",
 	devtools: { enabled: true },
-	css: ["~/assets/fonts/fonts.css", "~/assets/css/main.css"],
+	css: [
+		"~/assets/fonts/fonts.css",
+		"~/assets/css/main.css",
+		"~/assets/css/style.scss",
+	],
 	postcss: {
 		plugins: {
 			tailwindcss: {},

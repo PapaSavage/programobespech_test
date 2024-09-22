@@ -18,6 +18,9 @@ export default {
 				primary_dark: "#282828",
 				primary_gray: "#F3F6F8",
 
+				secondary_green: "#7FC75E",
+				secondary_lightred: "#E86E84",
+
 				font_black: "#293148",
 
 				phiolet: "#7895FF",
