@@ -1,0 +1,20 @@
+@font-face {
+  font-family: DMSans-Regular;
+  src: url(./DMSans-Regular.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: DMSans-Medium;
+  src: url(./DMSans-Medium.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: DMSans-Bold;
+  src: url(./DMSans-Bold.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: DMSans-SemiBold;
+  src: url(./DMSans-SemiBold.ttf);
+  font-display: swap;
+}
