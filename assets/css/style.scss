@@ -31,10 +31,12 @@
 
         &:hover {
             @apply btn text-primary_red border-primary_red;
+            border-radius: 6px;
         }
 
         &:active {
             @apply btn text-primary_red border-primary_red;
+            border-radius: 6px;
         }
 
         &_min {
@@ -52,8 +54,7 @@
 
 .search-container {
     position: relative;
-    display: inline-block;
-    /* Ensure the container wraps the input */
+    @apply flex flex-row items-center;
 }
 
 .input {
@@ -89,15 +90,15 @@
     }
 
     &::placeholder {
-        @apply text-gray;
+        @apply text-font_black;
     }
 }
 
 select {
     @apply rounded-[8px] text-[16px] leading-[22px] border px-[16px] py-[9px];
-    // -webkit-appearance: none;
-    // -moz-appearance: none;
-    // appearance: none;
+    padding-right: 53px;
+    appearance: none;
+    background: url(arrow_down.svg) no-repeat right;
 
     &:hover {
         @apply border-phiolet;
@@ -111,16 +112,6 @@ select {
         @apply text-gray;
     }
 
-    &::after {
-        content: url("./arrow_down.png");
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        transform: translateY(-50%);
-        height: 20px;
-        width: 20px;
-        pointer-events: none;
-    }
 }
 
 .icon {
@@ -130,7 +121,7 @@ select {
     right: 16px;
     width: 24px;
     height: 24px;
-    background: url('./zoom.ico') no-repeat;
+    background: url('./zoom.svg') no-repeat;
     background-size: cover;
 }
 
@@ -160,7 +151,6 @@ select {
 }
 
 hr.solid {
-    // border-top: 1px solid #bbbbbb7c;
     @apply border-t-font_black/10;
 }
 
