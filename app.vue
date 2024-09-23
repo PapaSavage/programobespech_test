@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-row">
-    <div class="w-[256px] bg-primary_dark sticky top-0 left-0 h-screen flex flex-col justify-between">
+    <div class="hidden w-[256px] bg-primary_dark sticky top-0 left-0 h-screen sm:flex flex-col justify-between">
       <div>
         <div class="mt-[30px] ml-[56px] mr-[76px] mb-[103px] text-white text-[24px] leading-[24px]"
           style="font-family: DMSans-Bold">
@@ -60,8 +60,8 @@
         </div>
       </div>
       <div class="mx-[30px] mt-[36px] mb-[30px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
-        <div class="sm:col-span-1 md:col-span-2 lg:col-span-3 grid grid-cols-3 gap-[30px]">
-          <div class="search-container">
+        <div class="col-span-1 sm:col-span-2 md:col-span-2 lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-[30px]">
+          <div class="search-container col-span-1">
             <input type="text" v-model="searchVin" placeholder="Search VIN" class="input_with_icon w-full" />
             <span class="icon"></span>
           </div>
@@ -72,7 +72,7 @@
               <option value="12">12</option>
             </select>
           </div>
-          <div class="place-self-end">
+          <div class="col-span-2 sm:col-span-1 flex flex-col  sm:items-end justify-center ">
             <button class="btn_solid_min">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -179,7 +179,7 @@ async function filterCars() {
           name: car.vehicle_name,
           preview: car.preview,
           vin: car.vin,
-          left: car.uploads,
+          left: car.left,
           timeleft: 3,
         };
       });
@@ -198,7 +198,6 @@ async function filterCars() {
   else {
     page.value = 1;
   }
-  console.log(targetcars.value);
 }
 
 async function pageminus() {
@@ -236,7 +235,6 @@ async function getAllCars() {
     };
   })
   filteredCars.value = allcars.value;
-
   updateVisibleCars();
   updateTotalPages();
 }
