@@ -31,7 +31,7 @@
         <div class="flex flex-row justify-between">
           <div class="flex flex-row justify-start items-center gap-[18px]">
             <h1>Vechicles</h1>
-            <button class="badge_primary">{{ total }}</button>
+            <button class="badge_primary animate__animated animate__fadeIn">{{ total }}</button>
           </div>
           <div class="flex flex-row">
             <button class="btn_outlined_icon">

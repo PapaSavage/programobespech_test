@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div class="card animate__animated animate__fadeIn">
         <button class="self-end">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -17,8 +17,11 @@
             </svg>
         </button>
 
-        <img v-if="car.preview" class="self-center mb-[24px] h-[135px]" :src="car.preview" alt="">
-        <img v-else class="self-center mb-[24px]" :src="'/img/car.png'" alt="">
+        <img v-if="car.preview"
+            class="self-center mb-[24px] h-[135px] transition duration-300 animate__animated animate__fadeIn"
+            :src="car.preview" alt="">
+        <img v-else class="self-center mb-[24px] transition duration-300 animate__animated animate__fadeIn"
+            :src="'/img/car.png'" alt="">
         <div class="title mb-[12px]">{{ car.name }}</div>
         <div class="flex flex-col gap-[18px]">
             <div class="subtitle text-gray">{{ car.vin }}</div>
@@ -48,7 +51,7 @@ defineProps(['car'])
 
 <style lang="scss">
 .card {
-    @apply flex flex-col bg-primary_gray min-w-[260px] lg:min-w-[354px] h-[335px] rounded-[10px] py-[16px] px-[24px];
+    @apply flex flex-col bg-primary_gray min-w-[260px] lg:min-w-[354px] h-[335px] rounded-[10px] py-[16px] px-[24px] transition duration-300;
 }
 
 .title {
